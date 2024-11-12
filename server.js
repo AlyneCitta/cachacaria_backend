@@ -3,16 +3,19 @@ const cors = require('cors');
 const app = express();
 const port = 3001;
 
-// Middlewares globais
+const userRoutes = require('./routes/userRoutes');
+const cityRoutes = require('./routes/cityRoutes'); 
+
 app.use(cors());
 app.use(express.json());
 
-// Rota inicial básica para teste
 app.get('/', (req, res) => {
-  res.send('Servidor está funcionando!');
+    res.send('Servidor está funcionando!');
 });
 
-// Iniciar o servidor
+app.use('/api/users', userRoutes);
+app.use('/api/cities', cityRoutes); 
+
 app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+    console.log(`Servidor rodando em http://localhost:${port}`);
 });
