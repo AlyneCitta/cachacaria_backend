@@ -9,6 +9,10 @@ const port = 3001;
 const authRouter = require('./routes/authController');
 const userRoutes = require('./routes/userRoutes');
 const cityRoutes = require('./routes/cityRoutes'); 
+const cartRoutes = require('./routes/cartRoutes')
+const productRoutes = require('./routes/productRoutes')
+const cupomDescRoutes = require('./routes/cupomDescRoutes')
+const orderRoutes = require('./routes/orderRoutes')
 
 app.use(cors());
 app.use(express.json());
@@ -41,6 +45,10 @@ app.get('/', verifyJWT, (req, res) => {
 app.use('/auth', authRouter);
 app.use('/api/users', userRoutes);
 app.use('/api/cities', cityRoutes); 
+app.use('/api/cart', cartRoutes); 
+app.use('/api/product', productRoutes); 
+app.use('/api/cupom', cupomDescRoutes); 
+app.use('/api/order', orderRoutes); 
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
