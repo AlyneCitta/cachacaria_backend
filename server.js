@@ -13,6 +13,7 @@ const cartRoutes = require('./routes/cartRoutes')
 const productRoutes = require('./routes/productRoutes')
 const cupomDescRoutes = require('./routes/cupomDescRoutes')
 const orderRoutes = require('./routes/orderRoutes')
+const identRoutes = require('./routes/identRoutes')
 
 app.use(cors());
 app.use(express.json());
@@ -49,6 +50,7 @@ app.use('/api/cart', cartRoutes);
 app.use('/api/product', productRoutes); 
 app.use('/api/cupom', cupomDescRoutes); 
 app.use('/api/order', orderRoutes); 
+app.use('/api/ident', identRoutes); 
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);

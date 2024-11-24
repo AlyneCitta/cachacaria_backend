@@ -5955,7 +5955,7 @@ INSERT INTO cidade (id, nome, id_estado, ibge) VALUES
 INSERT INTO identificacao (nome, telefone, whatsapp, dta_nascimento, cep, logradouro, numero, complemento, id_cidade) VALUES 
 ('João Silva', '11987654321', '11987654321', '1985-06-15', '01001000', 'Av. Paulista', '1000', 'Apto 101', 1),
 ('Maria Souza', '21987654321', '21987654321', '1990-09-20', '20040002', 'Rua Uruguaiana', '500', 'Apto 202', 2),
-('Carlos Santos', '31987654321', '31987654321', '1978-02-11', '30130010', 'Rua Bahia', '150', '', 3),
+('SENAI', '31987654321', '31987654321', '1978-02-11', '30130010', 'Rua Bahia', '150', '', 3),
 ('Ana Lima', '71987654321', '71987654321', '1988-12-22', '40020020', 'Av. Sete', '300', '', 4),
 ('Pedro Costa', '41987654321', '41987654321', '1982-04-01', '80020010', 'Rua XV', '100', '', 5);
 
@@ -5963,7 +5963,7 @@ INSERT INTO identificacao (nome, telefone, whatsapp, dta_nascimento, cep, lograd
 INSERT INTO usuario (email, senha, id_identificacao) VALUES 
 ('joao@example.com', 'senha123', 1),
 ('maria@example.com', 'senha456', 2),
-('carlos@example.com', 'senha789', 3),
+('uni@senai.com', 'senai', 3),
 ('ana@example.com', 'senha321', 4),
 ('pedro@example.com', 'senha654', 5);
 

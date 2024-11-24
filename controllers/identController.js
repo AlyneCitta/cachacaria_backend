@@ -1,4 +1,4 @@
-const identModel = require('../models/identModel');
+const identificationModel = require('../models/identificationModel');
 
 const indetController = {
 
@@ -6,22 +6,20 @@ const indetController = {
         const { IdUser } = req.params;
 
         if (!IdUser) {
-            return res.status(400).json({ message: 'Id do usário informado' });
+            return res.status(400).json({ message: 'Id do usário não informado' });
         }      
 
         try {
-            const cupomDesc = await cupomDescModel.findCupomById(idCupom);
+            const identification = await identificationModel.selectIdentByIdUser(IdUser);
 
-            // Verifique se retornou algum cupom
-            if (cupomDesc.length === 0) {
-                return res.status(404).json({ message: 'Cupom não localizado' });
+            if (identification.length === 0) {
+                console.log("Deue ruim");
+                return res.status(200).json({ message: 'IdentNotFound' });
             }
-
-            // retorna cupom
-            return res.status(200).json(cupomDesc);
+            return res.status(200).json(identification);
         } catch (error) {
-            console.error('Erro ao buscar cupom:', error);
-            return res.status(500).json({ message: 'Erro ao buscar cupom no banco de dados' });
+            console.error('Erro ao buscar Identificação:', error);
+            return res.status(500).json({ message: 'Erro ao buscar Identificação no banco de dados' });
         }
     },
 };
