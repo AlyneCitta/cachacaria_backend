@@ -23,6 +23,7 @@
     "lodash.isstring": "^4.0.1",
     "lodash.once": "^4.1.1",
     "lru-cache": "^11.0.2",
+    "mercadopago": "^2.0.15",
     "negotiator": "^1.0.0",
     "object-assign": "^4.1.1",
     "object-inspect": "^1.13.2",
