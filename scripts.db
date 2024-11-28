@@ -5977,11 +5977,12 @@ INSERT INTO transportadora (valor, id_identificacao) VALUES
 
 -- Tabela cupom_desc | select * from cupom_desc
 INSERT INTO cupom_desc (codigo, percentual_desc) VALUES 
-('', 0,),
+('', 0),
 ('CUPOM10', 10),
 ('CUPOM20', 20),
 ('CUPOM15', 15),
 ('CUPOM5', 5),
+('%20ROMANTICA', 20),
 ('CUPOM25', 25);
 
 -- Tabela etapa_pedido | select * from etapa_pedido
